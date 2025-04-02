@@ -11,7 +11,7 @@
 
 int main() {
     // 初始化系统
-    Invertedpendulum pendulum(1.0, 0.3, 0.5, 5.0);          // 1kg小车，0.3kg摆杆 控制力作用下,摩擦系数必须为负才有效,目前还不知道原因
+    Invertedpendulum pendulum(1.0, 0.3, 0.5, 5.0);            // 1kg小车，0.3kg摆杆 
     PID_Controller angle_pid(300.0, 60.0, 50.0, 30);          // 倒立摆角度内环150 40 50 30,摩擦1.0; 300 60 50 30,摩擦5.0
 
     // 数据记录
