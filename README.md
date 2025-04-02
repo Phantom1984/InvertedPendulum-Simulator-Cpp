@@ -38,10 +38,8 @@ CMakeLists.txt
 REAMDE.md
 
 ## Requirement
-C++ 17
 
-CMake Tools
-
-Eigen 3.4.0
-
-Python 3.8 + matplotlib
+- C++ 17
+- CMake Tools
+- Eigen 3.4.0
+- Python 3.8 + matplotlib
