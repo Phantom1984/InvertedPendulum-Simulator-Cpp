@@ -1,4 +1,4 @@
-### Brief
+## Brief
 
 这是一个用C++模拟一级小车倒立摆的控制程序。目前已实现：
 
@@ -13,7 +13,7 @@
 
 推荐在VSCode里进行编程，并使用CMake构建项目。项目采用GBK编码格式，如果是其它编码打开可能导致乱码
 
-### 项目结构
+## 项目结构
 
 backup：里面存放各类算法的main.cpp函数内容，选择想要的算法，直接复制粘贴进src/main.cpp即可
 
@@ -37,7 +37,7 @@ CMakeLists.txt
 
 REAMDE.md
 
-### Requirement
+## Requirement
 
 Eigen 3.4.0
 
