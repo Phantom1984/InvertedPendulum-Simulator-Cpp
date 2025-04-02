@@ -1,45 +1,61 @@
-## Brief
+# 一阶倒立摆控制算法模拟器
 
-这是一个用C++模拟一级小车倒立摆的控制程序。目前已实现：
+[![CMake](https://img.shields.io/badge/build-CMake-brightgreen)](https://cmake.org/)
+[![C++17](https://img.shields.io/badge/C++-17-blue.svg)](https://en.cppreference.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-- [x] 单级角度环PID
-- [x] LQR
-- [ ] 位置环PID+角度环PID
-- [ ] 速度环PID+角度环PID
-- [ ] 滑模控制
-- [ ] ......
+## 项目概述
 
-该项目旨在练习C++编程实践与控制算法模拟，后续将进行可视化的研究。
+本项目为基于C++的一阶小车倒立摆控制系统仿真平台，旨在提供多种控制算法的实现与对比分析。通过物理建模与数值积分，模拟倒立摆的动态响应过程。
 
-推荐在VSCode里进行编程，并使用CMake构建项目。项目采用GBK编码格式，如果是其它编码打开可能导致乱码
+## 🚀 已实现功能
 
-## 项目结构
+### 核心特性
+- ​**多控制算法集成**
+  - ✅ 单角度环PID控制（两种模型方向）
+  - ✅ LQR线性二次调节器
+  - 🚧 级联PID（位置环/速度环 + 角度环）
+  - 🚧 滑模控制
 
-backup：里面存放各类算法的main.cpp函数内容，选择想要的算法，直接复制粘贴进src/main.cpp即可
+- ​**可扩展架构**
+  - 📁 模块化代码结构
+  - 📊 数据记录与可视化支持
+  - 🔄 模型参数快速配置
 
-- angle_pid_backup.cpp：单级角度环PID控制，采用摆杆顺时针为正、小车向右为正的模型
-- angle2_pid_backup.cpp：单级角度环PID控制，采用摆杆逆时针为正、小车向右为正的模型
-- lqr_pid_backup.cpp：LQR控制，采用摆杆顺时针为正、小车向右为正的模型
-- lqr2_pid_backup.cpp：LQR控制，采用摆杆逆时针为正、小车向右为正的模型
+### 算法实现
+| 算法名称                  | 文件路径                          | 模型方向                     |
+|--------------------------|-----------------------------------|----------------------------|
+| 单角度环PID (顺时针模型) | `backup/angle_pid_backup.cpp`     | 摆杆顺时针为正，小车向右为正 |
+| 单角度环PID (逆时针模型)  | `backup/angle2_pid_backup.cpp`    | 摆杆逆时针为正，小车向右为正 |
+| LQR控制 (顺时针模型)      | `backup/lqr_pid_backup.cpp`      | 摆杆顺时针为正，小车向右为正 |
+| LQR控制 (逆时针模型)      | `backup/lqr2_pid_backup.cpp`     | 摆杆逆时针为正，小车向右为正 |
 
-inc：头文件存放目录
+## 🛠️ 快速开始
 
-output：模拟结果输出目录
+### 环境要求
+- ​**编译环境**
+  - C++17 兼容编译器
+  - CMake ≥ 3.12
+  - Eigen 3.4.0+
 
-- plot_simulation.py：结果可视化脚本
-- simulation.csv：模拟结果数据文件
+- ​**可视化工具**
+  - Python 3.8+
+  - Matplotlib
 
-src：源文件目录
+### 构建与运行
+```bash
+# 克隆项目
+git clone https://github.com/yourusername/inverted-pendulum-sim.git
+cd inverted-pendulum-sim
 
-一阶倒立摆.md：模型文档
+# 构建项目
+mkdir build && cd build
+cmake -G "MinGW Makefiles" ..
+make 
 
-CMakeLists.txt
+# 运行仿真
+.\InvertedPendulumSim.exe
 
-REAMDE.md
-
-## Requirement
-
-- C++ 17
-- CMake Tools
-- Eigen 3.4.0
-- Python 3.8 + matplotlib
+# 可视化结果
+cd ../output
+python plot_simulation.py
