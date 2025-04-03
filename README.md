@@ -35,19 +35,20 @@
 ### 环境要求
 - ​**编译环境**
   - C++17 兼容编译器
-  - MinGW64编译器
+  - MinGW64 编译器
   - CMake ≥ 3.12
   - Eigen 3.4.0+
 
 - ​**可视化工具**
   - Python 3.8+
+  - Pandas
   - Matplotlib
 
 ### 构建与运行
 ```bash
 # 克隆项目
-git clone https://github.com/yourusername/inverted-pendulum-sim.git
-cd inverted-pendulum-sim
+git clone https://github.com/Phantom1984/InvertedPendulum-Simulator-Cpp.git
+cd InvertedPendulum-Simulator-Cpp
 
 # 构建项目
 mkdir build && cd build
