@@ -56,7 +56,7 @@ cmake -G "MinGW Makefiles" ..
 make 
 
 # 运行仿真
-.\InvertedPendulumSim.exe
+.\InvertedPendulumControl.exe
 
 # 可视化结果
 cd ../output
